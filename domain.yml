@@ -36,6 +36,11 @@ slots:
     values:
     - population
     - capital
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hello! I am a Chatbot! I can let you know the capital and population of various countries.
@@ -56,6 +61,7 @@ responses:
 actions:
 - action_capital
 - action_population
+- action_ask_country
 forms:
   country_form:
     ignored_intents:

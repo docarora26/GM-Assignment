@@ -29,6 +29,8 @@ rules:
   steps:
   - action: country_form
   - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
   - action: action_population
 - rule: activate country form2
   steps:
@@ -43,4 +45,6 @@ rules:
   steps:
   - action: country_form
   - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
   - action: action_capital
