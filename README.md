@@ -5,10 +5,17 @@ This chatbot is designed to tell the capital and population of various countries
 It consists of following files
 
 data/nlu.yml contains training examples for the NLU model
+
 data/stories.yml contains training stories for the Core model
+
 actions.py contains the implementation of a custom FormAction
+
 config.yml contains the model configuration
+
 domain.yml contains the domain of the assistant
+
+endpoints.yml contains the webhook configuration for the custom actions
+
 # How to use
 It can run on local host or connected with rasa-x or other channels like facebook, telegram or any website
 You can test the example using the following steps:
