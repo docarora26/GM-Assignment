@@ -18,9 +18,7 @@ rules:
   - action: utter_chitchat
 - rule: activate country form
   steps:
-  - or:
-    - intent: check_capital
-    - intent: check_population
+  - intent: check_capital
   - action: country_form
   - active_loop: country_form
 - rule: submit country form
@@ -29,3 +27,8 @@ rules:
   steps:
   - action: country_form
   - active_loop: null
+- rule: activate country form2
+  steps:
+  - intent: check_population
+  - action: country_form
+  - active_loop: country_form

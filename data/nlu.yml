@@ -64,16 +64,16 @@ nlu:
     - tell me the capital of [Russia](country)
     - can you tell me capital of a country
     - i would like to know capital of [India](country)
-- intent: check_capital
+- intent: check_population
   examples: |
-    - im looking for a capital of a country
-    - can i know the capital of USA
-    - capital of Greece
-    - id like to know capital of a country
-    - im looking for capital of Sweden
-    - tell me the capital of Russia
-    - can you tell me capital of a country
-    - i would like to know capital of India
+    - im looking for a population of a country
+    - can i know the population of [USA](country)
+    - population of [Greece](country)
+    - id like to know population of a country
+    - im looking for population of [Sweden](country)
+    - tell me the population of [Russia](country)
+    - can you tell me population of a country
+    - i would like to know population of [India](country)
 - intent: country
   examples: |
     - [USA](country)
