@@ -62,6 +62,7 @@ actions:
 - action_capital
 - action_population
 - action_ask_country
+- validate_country_form
 forms:
   country_form:
     ignored_intents:
