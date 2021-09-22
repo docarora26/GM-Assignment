@@ -1,0 +1,43 @@
+version: "2.0"
+intents:
+  - check_capital
+  - check_population
+  - Greet
+  - Goodbye
+entities:
+  - country
+slots:
+  country:
+    type: text
+    influence_conversation: false
+responses:
+  utter_greet:
+    - text: "Hello! I am a Chatbot! I can let you know the capital and population of various countries."
+  utter_goodbye:
+    - text: "Bye bye, take care"
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  utter_chitchat:
+    - text: "chitchat"
+  utter_select:
+    - text: "Please select the country"
+  utter_capital:
+    - text: "Capital of {country} is - {capital}"
+  utter_population:
+    - text: "Population of {country} is - {population}"
+  utter_wrong_country:
+    - text: "Sorry. Data of this countru is not available. Please enter another country."
+actions:
+- action_country
+forms:
+  country_form:
+    ignored_intents:
+    - chitchat
+    required_slots:
+      country:
+      - type: from_entity
+        entity: country
+        intent: [country, check_capital, check_population]
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true
