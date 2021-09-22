@@ -1,36 +1,31 @@
 version: "2.0"
 rules:
-  - rule: Greet user
-    steps:
-      - intent: Greet
-      - action: utter_greet
-
-  - rule: Goodbye
-    steps:
-      - intent: Goodbye
-      - action: utter_goodbye
-
-  - rule: Bot challenge
-    steps:
-      - intent: bot_challenge
-      - action: utter_iamabot
-
-  - rule: Chitchat
-    steps:
-      - intent: chitchat
-      - action: utter_chitchat
-
-  - rule: activate country form
-    steps:
-      - or:
-        - intent: check_capital
-        - intent: check_population
-      - action: capital_form
-      - active_loop: capital_form
-
-  - rule: submit country form
-    condition:
-    - active_loop: capital_form
-    steps:
-      - action: capital_form
-      - active_loop: null
+- rule: Greet user
+  steps:
+  - intent: Greet
+  - action: utter_greet
+- rule: Goodbye
+  steps:
+  - intent: Goodbye
+  - action: utter_goodbye
+- rule: Bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- rule: Chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- rule: activate country form
+  steps:
+  - or:
+    - intent: check_capital
+    - intent: check_population
+  - action: country_form
+  - active_loop: country_form
+- rule: submit country form
+  condition:
+  - active_loop: country_form
+  steps:
+  - action: country_form
+  - active_loop: null
