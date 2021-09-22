@@ -21,12 +21,21 @@ intents:
     use_entities: true
 entities:
 - country
+- entity
 slots:
   country:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
     influence_conversation: false
+  entity:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - population
+    - capital
 responses:
   utter_greet:
   - text: Hello! I am a Chatbot! I can let you know the capital and population of various countries.

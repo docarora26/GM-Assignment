@@ -56,24 +56,24 @@ nlu:
     - um okay thank you good bye
 - intent: check_capital
   examples: |
-    - im looking for a capital of a country
-    - can i know the capital of [USA](country)
-    - capital of [Greece](country)
-    - id like to know capital of a country
-    - im looking for capital of [Sweden](country)
-    - tell me the capital of [Russia](country)
-    - can you tell me capital of a country
-    - i would like to know capital of [India](country)
+    - im looking for a [capital](entity) of a country
+    - can i know the [capital](entity) of [USA](country)
+    - [capital](entity) of [Greece](country)
+    - id like to know [capital](entity) of a country
+    - im looking for [capital](entity) of [Sweden](country)
+    - tell me the [capital](entity) of [Russia](country)
+    - can you tell me [capital](entity) of a country
+    - i would like to know [capital](entity) of [India](country)
 - intent: check_population
   examples: |
-    - im looking for a population of a country
-    - can i know the population of [USA](country)
-    - population of [Greece](country)
-    - id like to know population of a country
-    - im looking for population of [Sweden](country)
-    - tell me the population of [Russia](country)
-    - can you tell me population of a country
-    - i would like to know population of [India](country)
+    - im looking for a [population](entity) of a country
+    - can i know the [population](entity) of [USA](country)
+    - [population](entity) of [Greece](country)
+    - id like to know [population](entity) of a country
+    - im looking for [population](entity) of [Sweden](country)
+    - tell me the [population](entity) of [Russia](country)
+    - can you tell me [population](entity) of a country
+    - i would like to know [population](entity) of [India](country)
 - intent: country
   examples: |
     - [USA](country)

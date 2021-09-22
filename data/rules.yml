@@ -24,11 +24,23 @@ rules:
 - rule: submit country form
   condition:
   - active_loop: country_form
+  - slot_was_set:
+    - entity: population
   steps:
   - action: country_form
   - active_loop: null
+  - action: action_population
 - rule: activate country form2
   steps:
   - intent: check_population
   - action: country_form
   - active_loop: country_form
+- rule: submit country form2
+  condition:
+  - active_loop: country_form
+  - slot_was_set:
+    - entity: capital
+  steps:
+  - action: country_form
+  - active_loop: null
+  - action: action_capital
